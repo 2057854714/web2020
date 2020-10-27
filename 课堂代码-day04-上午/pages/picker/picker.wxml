@@ -1,0 +1,31 @@
+<view>普通选择器</view>
+<picker mode="selector" bindchange="changeLession" value="{{lessionIndex}}" range="{{lessionDatas}}">
+  <view>课程:{{lessionDatas[lessionIndex]}}</view>
+</picker>
+
+<view>时间选择器</view>
+
+<picker mode="time" bindchange="changeTime" value="{{time}}" start="10:09" end="12:00">
+  <view>当前时间:{{time}}</view>
+</picker>
+
+<view>日期选择器</view>
+
+<picker mode="date" bindchange="changeDate" value="{{odate}}" start="2020-01-01" end="2035-11-11">
+  <view>当前日期:{{odate}}</view>
+</picker>
+
+<view>省市区选择器</view>
+<picker mode = "region" value="{{cityDatas}}" bindchange="changeCity" custom-item="{{allCity}}">
+  <view>选择城市：{{cityDatas[0]}}-{{cityDatas[1]}}-{{cityDatas[2]}}</view>
+</picker>
+
+<view>多列选择器</view>
+<!-- 
+  carIndex=[0,0]  
+  cars:[["宝马","奥迪","大众"],["宝马X1","宝马X2","宝马X3","宝马X5"]], 
+-->
+<picker mode="multiSelector" bindchange="changeCarValue" bindcolumnchange="changeColumn" value="{{carIndex}}" range="{{cars}}">
+ <view>挑选车开回家:{{cars[0][carIndex[0]]}},{{cars[1][carIndex[1]]}}</view>
+</picker>
+

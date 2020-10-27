@@ -1,0 +1,2 @@
+<!--pages/slider/slider.wxml-->
+<slider  left-icon="cancel" right-icon="success_no_circle"/>
